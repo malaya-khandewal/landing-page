@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bodha AI | Ancient Wisdom, Future Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-card {
+            background: rgba(252, 249, 248, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 0, 60, 0.1);
+        }
+        .jaali-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0, 0, 60, 0.03) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .neural-line {
+            background: linear-gradient(90deg, transparent, #8f4e00, transparent);
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            animation: neural-flow 3s infinite linear;
+        }
+        @keyframes neural-flow {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .mandala-rotate {
+            animation: slow-rotate 120s infinite linear;
+        }
+        @keyframes slow-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(254, 152, 50, 0.08) 0%, transparent 70%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1b1c1a",
+                        "on-secondary-container": "#683700",
+                        "inverse-surface": "#313030",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-primary": "#bfc2ff",
+                        "on-secondary-fixed": "#2e1500",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-primary-fixed-variant": "#3239a3",
+                        "tertiary": "#0a0c0a",
+                        "primary": "#00003c",
+                        "on-surface-variant": "#464653",
+                        "secondary": "#8f4e00",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-tint": "#4b53bc",
+                        "surface-container": "#f0eded",
+                        "background": "#fcf9f8",
+                        "on-tertiary-fixed-variant": "#464744",
+                        "surface-bright": "#fcf9f8",
+                        "secondary-container": "#fe9832",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed-dim": "#ffb77a",
+                        "primary-container": "#000080",
+                        "surface-container-low": "#f6f3f2",
+                        "on-primary-fixed": "#00006e",
+                        "secondary-fixed": "#ffdcc2",
+                        "on-tertiary-container": "#898986",
+                        "primary-fixed-dim": "#bfc2ff",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#777eea",
+                        "on-surface": "#1c1b1b",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#6d3a00",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#212220",
+                        "tertiary-fixed-dim": "#c7c7c3",
+                        "surface-container-high": "#eae7e7",
+                        "primary-fixed": "#e0e0ff",
+                        "tertiary-fixed": "#e3e2df",
+                        "outline": "#767684",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fcf9f8",
+                        "outline-variant": "#c6c5d5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md jaali-pattern">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm">
+<div class="text-headline-md font-headline-md font-bold text-primary">Bodha AI</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-300" href="#solutions">Solutions</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-300" href="#research">Research</a>
+<a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-300" href="#why">Why Choose Us</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">Get Started</button>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-margin-desktop py-16 overflow-hidden">
+<!-- Background elements -->
+<div class="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+<div class="hero-gradient absolute inset-0"></div>
+<!-- Primary Rotating Mandala Background Pattern remains intact -->
+<div class="relative w-[140vw] h-[140vw] max-w-[1600px] max-h-[1600px] mandala-rotate opacity-20">
+<img class="w-full h-full object-contain" data-alt="Intricate geometric mandala visualization merging traditional patterns with digital neural networks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJfgDZ3c51oRkOazLUv9FYlcOq-YnO6bXRvjezdscFkuMHO_aLDoSIjFzQBojx6oBrBkAXBFzUPMsL4DQWFHRO_4nr32EW7BnN47OjhXwfpdhfw2KugMw_fqvM1KtdGcejQ7MDvsK6jcjX6yobIgq6MNCQnpmRks9olllXP1Ke-xXZOWURFdK4RdJbdXHFlRxaxgS6YSFCOU9RaMcb3dwyShlgE-KhUIAgR1LdbcwSm2QJ7wXiykZpHfB8il0ZY_PyUZpAjCZWrHbv"/>
+</div>
+<!-- Secondary rotating square element was removed here -->
+</div>
+<div class="max-w-container-max mx-auto w-full z-10 text-center flex flex-col items-center">
+<div class="space-y-10 max-w-4xl">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-primary-fixed rounded-full text-primary font-label-sm mx-auto shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                    Empowering Enterprise with Intelligence
+                </div>
+<h1 class="text-display-lg font-display-lg text-primary leading-[1.1] md:text-[64px]">
+                    Transforming Industries with <br/><span class="text-secondary">Intelligent AI</span> Solutions
+                </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Bodha AI builds cutting-edge Artificial Intelligence systems that help organizations automate operations, enhance decision-making, and unlock growth.
+                </p>
+<div class="flex flex-wrap gap-6 pt-4 justify-center">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-lg font-headline-md text-body-md hover:bg-on-secondary-fixed-variant transition-all flex items-center gap-2 group shadow-lg">
+                        Explore Solutions
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary px-10 py-4 rounded-lg font-headline-md text-body-md hover:bg-primary hover:text-on-primary transition-all">
+                        Get Started
+                    </button>
+</div>
+</div>
+</div>
+<!-- Neural flow decoration -->
+<div class="absolute bottom-0 left-0 w-full pointer-events-none">
+<div class="neural-line opacity-20"></div>
+<div class="neural-line opacity-10" style="top: 10px; animation-delay: 1.5s;"></div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-low relative" id="about">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-5 space-y-6">
+<h2 class="text-headline-lg font-headline-lg text-primary">Democratizing AI for Every Horizon</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                        Bodha AI is an innovation powerhouse dedicated to making high-tier intelligence accessible. We bridge the gap between complex research and practical application, ensuring that the transformative power of AI is not just a privilege for the few, but a catalyst for all.
+                    </p>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="glass-card p-6 rounded-xl space-y-3 hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">neurology</span>
+<h3 class="font-bold text-primary">Generative AI</h3>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-3 hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">account_tree</span>
+<h3 class="font-bold text-primary">LLMs</h3>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-3 hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<h3 class="font-bold text-primary">Agentic Systems</h3>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-3 hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">database</span>
+<h3 class="font-bold text-primary">RAG</h3>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-3 hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<h3 class="font-bold text-primary">Predictive Analytics</h3>
+</div>
+<div class="glass-card p-6 rounded-xl space-y-3 hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-bold text-primary">Cognitive Services</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Solutions (Bento Grid) -->
+<section class="py-24 px-margin-desktop" id="solutions">
+<div class="max-w-container-max mx-auto space-y-12">
+<div class="text-center space-y-4 max-w-2xl mx-auto">
+<h2 class="text-headline-lg font-headline-lg text-primary">Core Solutions</h2>
+<p class="text-on-surface-variant font-body-md">Tailored AI architectures designed to solve real-world complexities across diverse industry verticals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[280px]">
+<div class="md:col-span-8 glass-card rounded-2xl overflow-hidden group relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-500" data-alt="A modern educational setting featuring students interacting with holographic interfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb4PvpP8MTPI3AlahIUaMPnjGML5NSTQ81M5_SHVrEihMTjazADGKqfMV33A-w4EkAEe3t7-R0EwJr-sbVi3fCeuldSkC4hsTeqSb0bDEqoIOgj2fmFlo-4-5M_LbgX4iJBYAcEdPF-JsW6KpNdD1hIXGADQrPyKa-lOLZUHkOvLGIW6cIF1exX4ZuzR0F-XIhsDc--w8yKFxEMW_S9HKETJ7TZIBBHzpTJNmYBOGY_a_aBacXLqNoEN3AmmjmcR8UYt0XM0OnD5i-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-secondary mb-4 text-4xl" style="font-variation-settings: 'FILL' 1;">school</span>
+<h3 class="text-headline-md font-headline-md text-primary">AI for Education</h3>
+<p class="text-on-surface-variant max-w-md">Next-gen platforms for universities, personalized JEE/NEET assessment engines, and dedicated AI tutors for individual growth.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-primary text-on-primary rounded-2xl p-8 flex flex-col justify-between">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl" style="font-variation-settings: 'FILL' 1;">payments</span>
+<h3 class="text-headline-md font-headline-md">Financial Markets</h3>
+</div>
+<p class="text-surface-variant text-body-md">High-frequency analytics, sentiment intelligence from news cycles, and predictive market modeling for agile decisioning.</p>
+</div>
+<div class="md:col-span-4 glass-card rounded-2xl p-8 flex flex-col justify-between border-b-4 border-secondary">
+<div class="space-y-4">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+<h3 class="text-headline-md font-headline-md text-primary">Conversational AI</h3>
+</div>
+<p class="text-on-surface-variant text-body-md">Human-like interactions across voice and text. Advanced voice agents and multi-lingual speech analytics.</p>
+</div>
+<div class="md:col-span-8 glass-card rounded-2xl overflow-hidden group relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-500" data-alt="Sophisticated corporate headquarters interior with digital overlays of data flow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6xbxFlhJBWmQAtZvGvk4eeOKwiL0-7FnHRH_FAotiwP13j_PabY1iKfvGsTaqyI7t8z1fDJCcYMsbgJ1XJ0kgL_ykGWCoIVWgdMoBbjE1FCEgs51rGvb48fB0pmg4F1WksB3Aq5WpxDEhA7r3a-1baBrPd8-yiwaGuhnvoeSM82Gyi752gUKr55A4HEI0LKFWw1fyNqDs6DvfKCAC3gX7iNW6JSIOkmEeAoLRZEVZR1vJaEMK4gvWAYjJ-1kF_9m6hElfZK_bJ9nT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent p-8 flex flex-col justify-end">
+<span class="material-symbols-outlined text-secondary mb-4 text-4xl" style="font-variation-settings: 'FILL' 1;">business_center</span>
+<h3 class="text-headline-md font-headline-md text-primary">Enterprise AI</h3>
+<p class="text-on-surface-variant max-w-md">Operations automation, intelligent chatbots for BFSI, and cognitive document processing for Healthcare compliance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 px-margin-desktop bg-primary relative overflow-hidden" id="why">
+<div class="absolute inset-0 opacity-5 jaali-pattern"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="space-y-8">
+<h2 class="text-headline-lg font-headline-lg text-on-primary">Why Choose Us</h2>
+<div class="grid grid-cols-1 gap-6">
+<div class="flex gap-6 items-start">
+<div class="bg-secondary p-3 rounded-xl">
+<span class="material-symbols-outlined text-on-secondary">architecture</span>
+</div>
+<div>
+<h4 class="text-on-primary font-bold text-lg">Scalable Architecture</h4>
+<p class="text-surface-variant text-body-md">Built to grow with your data, from pilot to production-grade deployment.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-secondary p-3 rounded-xl">
+<span class="material-symbols-outlined text-on-secondary">science</span>
+</div>
+<div>
+<h4 class="text-on-primary font-bold text-lg">Research + Practicality</h4>
+<p class="text-surface-variant text-body-md">We don't just innovate; we implement solutions that deliver tangible ROI.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="bg-secondary p-3 rounded-xl">
+<span class="material-symbols-outlined text-on-secondary">groups</span>
+</div>
+<div>
+<h4 class="text-on-primary font-bold text-lg">Human-Centric AI</h4>
+<p class="text-surface-variant text-body-md">Ethics-first approach, ensuring AI augments human potential rather than replacing it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square bg-secondary/10 rounded-3xl border border-white/10 p-12 flex items-center justify-center">
+<img class="w-full h-full object-contain drop-shadow-2xl" data-alt="Artistic representation of an AI core as a brilliant multifaceted gemstone lotus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmdZaY6hZQf6BWhIUwGxgQkIC6zoIJj0ShPF9_SPrYyTCt-PkO0agknJkFVMHqmNtRkNemvgxIqs_N-hHN5kPZCtokU4Osu4y9YXF6A-0vcJxaWR7G-wPAHJRy9MoBN0ujH-OsfnpRSiAcxVvD2PgSOsyfu8HSXHM6rCeXsZYJefv9QZPAR7_16Y6103J1Rz2uKwHE7R3uX6XapHgN8f1H42dn7YiucFxI9pXdtb_HvdROhMK5gSInj-8fI2karC1rn3E-n2G7PhwH"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technology Stack Ticker -->
+<section class="py-16 px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto">
+<p class="text-center text-label-md text-on-surface-variant uppercase tracking-widest mb-12">Driven by World-Class Technology</p>
+<div class="flex flex-wrap justify-center gap-12 opacity-60 grayscale hover:grayscale-0 transition-all">
+<div class="flex items-center gap-2 font-headline-md text-primary"><span class="material-symbols-outlined">code</span> Python</div>
+<div class="flex items-center gap-2 font-headline-md text-primary"><span class="material-symbols-outlined">api</span> PyTorch</div>
+<div class="flex items-center gap-2 font-headline-md text-primary"><span class="material-symbols-outlined">link</span> LangChain</div>
+<div class="flex items-center gap-2 font-headline-md text-primary"><span class="material-symbols-outlined">memory</span> Llama 3</div>
+<div class="flex items-center gap-2 font-headline-md text-primary"><span class="material-symbols-outlined">bolt</span> OpenAI</div>
+<div class="flex items-center gap-2 font-headline-md text-primary"><span class="material-symbols-outlined">cloud</span> AWS</div>
+</div>
+</div>
+</section>
+<!-- Vision & Final CTA -->
+<section class="py-24 px-margin-desktop text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-secondary/5 -skew-y-3 origin-right"></div>
+<div class="max-w-4xl mx-auto relative z-10 space-y-12">
+<div class="space-y-6">
+<span class="text-secondary font-label-md tracking-widest uppercase">Our Vision</span>
+<h2 class="text-display-lg font-display-lg text-primary leading-tight">
+                    "To build intelligent AI systems that fundamentally improve how people learn, work, and communicate."
+                </h2>
+</div>
+<div class="glass-card p-12 rounded-3xl border-2 border-secondary/20 shadow-2xl space-y-8">
+<h3 class="text-headline-lg font-headline-lg text-primary">Ready to Build with AI?</h3>
+<p class="text-body-lg text-on-surface-variant max-w-xl mx-auto">Join pioneering organizations transforming their future with Bodha AI's intelligent solutions.</p>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-xl font-headline-md hover:bg-secondary transition-all active:scale-95">
+                    Let's build the future together
+                </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary w-full py-16 px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto border-t border-white/10">
+<div class="space-y-6">
+<div class="text-headline-md font-headline-md font-bold text-on-primary">Bodha AI</div>
+<p class="text-surface-variant text-label-md">© 2024 Bodha AI. Ancient Wisdom, Future Intelligence.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary transition-colors" href="#"><span class="material-symbols-outlined text-sm">link</span></a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-secondary-fixed">Quick Links</h4>
+<ul class="space-y-2 text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#solutions">Solutions</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#research">Research</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#why">Why Choose Us</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-secondary-fixed">Legal</h4>
+<ul class="space-y-2 text-surface-variant">
+<li><a class="hover:text-secondary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-secondary-container transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-secondary-fixed">Newsletter</h4>
+<p class="text-surface-variant text-label-sm">Stay updated with the latest in AI innovation.</p>
+<div class="flex gap-2">
+<input class="bg-white/10 border-white/20 rounded-lg px-4 py-2 text-sm w-full focus:ring-secondary focus:border-secondary" placeholder="Email address" type="email"/>
+<button class="bg-secondary p-2 rounded-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</footer>
+<script>
+    // Micro-interactions and effects
+    document.addEventListener('mousemove', (e) => {
+        const x = e.clientX / window.innerWidth - 0.5;
+        const y = e.clientY / window.innerHeight - 0.5;
+        
+        // Parallax only on the remaining mandala background
+        const rotators = document.querySelectorAll('.mandala-rotate');
+        rotators.forEach((rotator) => {
+            const depth = 30;
+            rotator.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+        });
+    });
+
+    // Add hover effects to cards
+    const cards = document.querySelectorAll('.glass-card');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-5px)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+</script>
+</body></html>
