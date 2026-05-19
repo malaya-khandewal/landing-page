@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-300">
-      <div className="max-w-container-max mx-auto px-margin-desktop py-4 flex justify-between items-center">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
         <a href="#" className="text-headline-md font-headline-md font-bold text-primary hover:opacity-90 transition-opacity">
           Bodha AI
         </a>
@@ -59,7 +59,7 @@ export default function Header() {
 
       {/* Mobile Navigation Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-surface/95 border-b border-outline-variant/10 backdrop-blur-xl px-margin-desktop py-4 flex flex-col gap-4 animate-fade-in">
+        <div className="md:hidden bg-surface/95 border-b border-outline-variant/10 backdrop-blur-xl px-margin-mobile py-4 flex flex-col gap-4 animate-fade-in">
           <a
             className="text-on-surface-variant font-label-md hover:text-secondary py-2 border-b border-outline-variant/5 transition-colors"
             href="#solutions"

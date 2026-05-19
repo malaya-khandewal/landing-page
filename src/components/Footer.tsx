@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="bg-primary text-on-primary w-full py-16">
-      <div className="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter border-t border-white/10 pt-16">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter border-t border-white/10 pt-16">
         {/* Brand Column */}
         <div className="space-y-6">
           <div className="text-headline-md font-headline-md font-bold text-on-primary">
