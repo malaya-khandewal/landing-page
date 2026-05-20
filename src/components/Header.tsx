@@ -38,11 +38,14 @@ export default function Header() {
           </a>
         </nav>
 
-        {/* Get Started Button */}
+        {/* Contact Us Button */}
         <div className="hidden md:block">
-          <button className="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all">
-            Get Started
-          </button>
+          <a
+            href="mailto:malaya@bodhaai.tech"
+            className="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all inline-block"
+          >
+            Contact Us
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,12 +84,13 @@ export default function Header() {
           >
             Why Choose Us
           </a>
-          <button
-            className="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all mt-2 w-full text-center"
+          <a
+            href="mailto:malaya@bodhaai.tech"
+            className="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-md hover:opacity-90 active:scale-95 transition-all mt-2 w-full text-center inline-block"
             onClick={() => setIsOpen(false)}
           >
-            Get Started
-          </button>
+            Contact Us
+          </a>
         </div>
       )}
     </header>
