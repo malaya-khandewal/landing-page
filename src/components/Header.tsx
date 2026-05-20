@@ -13,7 +13,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/10 shadow-sm transition-all duration-300">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
         <a href="#" className="text-headline-md font-headline-md font-bold text-primary hover:opacity-90 transition-opacity">
-          Bodha AI
+          BodhaAI
         </a>
 
         {/* Desktop Navigation */}

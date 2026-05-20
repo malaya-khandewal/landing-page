@@ -5,10 +5,10 @@ export default function Footer() {
         {/* Brand Column */}
         <div className="space-y-6">
           <div className="text-headline-md font-headline-md font-bold text-on-primary">
-            Bodha AI
+            BodhaAI
           </div>
           <p className="text-surface-variant text-label-md">
-            © 2024 Bodha AI. Ancient Wisdom, Future Intelligence.
+            © 2024 BodhaAI. Ancient Wisdom, Future Intelligence.
           </p>
           <div className="flex gap-4">
             <a
@@ -85,31 +85,17 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Newsletter Subscription */}
+        {/* Address Column */}
         <div className="space-y-4">
-          <h4 className="font-bold text-secondary-fixed">Newsletter</h4>
-          <p className="text-surface-variant text-label-sm">
-            Stay updated with the latest in AI innovation.
+          <h4 className="font-bold text-secondary-fixed">Office Address</h4>
+          <p className="text-surface-variant text-label-md leading-relaxed">
+            Srijan Corporate Park,<br />
+            Block-GP, Plot No. G2,<br />
+            Sector V, Salt Lake City,<br />
+            Kolkata – 700091, West Bengal, India
           </p>
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="flex gap-2"
-          >
-            <input
-              className="bg-white/10 border-white/20 rounded-lg px-4 py-2 text-sm w-full focus:ring-secondary focus:border-secondary focus:outline-none"
-              placeholder="Email address"
-              type="email"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-secondary text-on-secondary p-2 rounded-lg hover:opacity-90 active:scale-95 transition-all flex items-center justify-center cursor-pointer"
-              aria-label="Subscribe"
-            >
-              <span className="material-symbols-outlined text-[20px]">send</span>
-            </button>
-          </form>
         </div>
+
       </div>
     </footer>
   );

@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bodha AI | Ancient Wisdom, Future Intelligence",
+  title: "BodhaAI",
   description:
-    "Bodha AI builds cutting-edge Artificial Intelligence systems that help organizations automate operations, enhance decision-making, and unlock growth.",
+    "BodhaAI builds cutting-edge Artificial Intelligence systems that help organizations automate operations, enhance decision-making, and unlock growth.",
 };
 
 export default function RootLayout({

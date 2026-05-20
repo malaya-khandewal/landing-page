@@ -57,7 +57,7 @@ export default function Home() {
                 <span className="text-secondary">Intelligent AI</span> Solutions
               </h1>
               <p className="text-body-md sm:text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto px-4">
-                Bodha AI builds cutting-edge Artificial Intelligence systems that
+                BodhaAI builds cutting-edge Artificial Intelligence systems that
                 help organizations automate operations, enhance decision-making,
                 and unlock growth.
               </p>
@@ -100,7 +100,7 @@ export default function Home() {
                   Democratizing AI for Every Horizon
                 </h2>
                 <p className="text-body-md sm:text-body-lg font-body-lg text-on-surface-variant">
-                  Bodha AI is an innovation powerhouse dedicated to making
+                  BodhaAI is an innovation powerhouse dedicated to making
                   high-tier intelligence accessible. We bridge the gap between
                   complex research and practical application, ensuring that the
                   transformative power of AI is not just a privilege for the
@@ -386,8 +386,7 @@ export default function Home() {
                 Ready to Build with AI?
               </h3>
               <p className="text-body-md sm:text-body-lg text-on-surface-variant max-w-xl mx-auto">
-                Join pioneering organizations transforming their future with Bodha
-                AI&apos;s intelligent solutions.
+                Join pioneering organizations transforming their future with BodhaAI's intelligent solutions.
               </p>
               <button className="bg-primary text-on-primary px-8 py-4 sm:px-12 sm:py-5 rounded-xl font-headline-md hover:bg-secondary transition-all active:scale-95 cursor-pointer w-full sm:w-auto">
                 Let&apos;s build the future together
