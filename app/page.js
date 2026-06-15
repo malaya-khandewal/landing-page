@@ -9,10 +9,12 @@ import Vision from '@/components/Vision';
 import Cta from '@/components/Cta';
 import Footer from '@/components/Footer';
 import ScrollReveals from '@/components/ScrollReveals';
+import SmoothScroll from '@/components/SmoothScroll';
 
 export default function Home() {
   return (
     <>
+      <SmoothScroll />
       <Header />
       <main>
         <Hero />
