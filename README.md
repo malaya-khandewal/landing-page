@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BodhaAI Website — Next.js
 
-## Getting Started
+Clean, modern, AI-forward redesign with subtle Indian roots: Bengal indigo + marigold palette,
+a jaali-lattice interactive hero, and Sanskrit annotations used sparingly.
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 14 (App Router), React 18
+- Plain CSS (`app/globals.css`) — no UI framework, zero extra dependencies
+- Fonts via `next/font/google`: Bricolage Grotesque (display), Hanken Grotesk (body),
+  Tiro Devanagari Sanskrit (Devanagari accents) — self-hosted by Next at build time
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/
+  layout.js        # fonts + metadata
+  page.js          # assembles all sections
+  globals.css      # design tokens + all styles
+components/
+  Header.jsx       # sticky nav + mobile menu (client)
+  Hero.jsx         # interactive hero (client)
+  Jaali.jsx        # interactive jaali lattice (client)
+  ScrollReveals.jsx# scroll-in animations (client)
+  Capabilities.jsx, About.jsx, Solutions.jsx, Why.jsx,
+  Stack.jsx, Vision.jsx, Cta.jsx, Footer.jsx   # server components
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Hero interactions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Cursor-following marigold glow across the section
+- Staggered entrance animation on load
+- Rotating headline word ("what's next / every learner / every market / every enterprise")
+- Kolam panel: 3D tilt that follows the cursor, line-drawing intro, breathing core node,
+  rotating orbit ring, and golden "signal" particles travelling along the kolam paths
+- Magnetic CTA buttons
+- Floating marigold motes in the background
 
-## Deploy on Vercel
+All motion respects `prefers-reduced-motion`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build for production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm start
+```
+
+Deploys as-is to Vercel, or anywhere Node runs.
